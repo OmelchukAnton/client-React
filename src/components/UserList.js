@@ -1,17 +1,18 @@
 import React, { Component } from "react";
-import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo';
+import { getUserQuery } from '../queries/queries';
 
-const getUserQuery = gql`
-	{
-		getTime {
-			username
-			date
-		}
-	}
-`;
+// components
+import UserDetails from './UserDetails';
 
 class UserList extends Component {
+    constructor (props) {
+        super(props);
+        this.state = {
+            selected: null
+        };
+    }
+
     displayUsers () {
         let data = this.props.data;
         if (data.loading) {
@@ -19,17 +20,19 @@ class UserList extends Component {
         } else {
             return data.getTime.map(user => {
                 return (
-                    <li key={user.id}> { user.username } </li>
+                    <li key={user.id} onClick={(e) => { this.setState({ selected: user.id });}}> { user.username } </li>
                 );
             });
         }
     }
+
     render () {
         return (
             <div>
                 <ul>
                     <li> { this.displayUsers() } </li>
                 </ul>
+                <UserDetails userId={this.state.selected}/>
             </div>
         );
     }

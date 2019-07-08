@@ -6,10 +6,11 @@ import '../styles/App.css';
 
 // components
 import UserList from './UserList.js';
+import AddUser from './AddUser.js';
 
 // apollo client setup
 const client = new ApolloClient({
-    uri: `http://localhost:3000/`,
+    uri: `http://localhost:3000/`
 });
 
 class App extends Component {
@@ -19,8 +20,9 @@ class App extends Component {
 	            <div id="main">
 	                <h1>My React and GraphQL App!</h1>
                     <UserList />
+                    <AddUser />
 	            </div>
-            </ApolloProvider>	
+            </ApolloProvider>
         );
     }
 }
