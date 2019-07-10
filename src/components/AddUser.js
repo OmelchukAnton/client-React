@@ -26,7 +26,7 @@ class AddUser extends Component {
     render () {
         return (
 
-            <form id="add-date" onSubmit={this.submitForm.bind(this)}>
+            <form id="add-user" onSubmit={this.submitForm.bind(this)}>
                 <div className="field">
                     <label> User name: </label>
                     <input type="text" onChange={(e) => this.setState({ username: e.target.value })} />
@@ -35,7 +35,9 @@ class AddUser extends Component {
                     <label> Select date </label>
                     <input type="date" onChange={(e) => this.setState({ date: e.target.value })} />
                 </div>
-                <button> Save User </button>
+                <div className="field">
+                    <button> Save </button>
+                </div>
             </form>
 
         );

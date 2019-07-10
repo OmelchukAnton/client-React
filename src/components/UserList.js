@@ -28,7 +28,8 @@ class UserList extends Component {
 
     render () {
         return (
-            <div>
+            <div id="user-list">
+                <h2> User List: </h2>
                 <ul>
                     <li> { this.displayUsers() } </li>
                 </ul>

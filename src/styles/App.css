@@ -4,7 +4,80 @@ body {
 	font-family: sans-serif;
 }
 
-h1 {
+#main h1 {
     color: #27aedb;
     text-align: center;
+}
+
+#main {
+    box-sizing: border-box;
+	width: 60%;
+	height: 100%;
+}
+
+#user-list {
+    border: 1px solid #880E4F;
+	text-align: center;
+}
+
+#user-list li {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 1px 2px 3px 1px rgba(0,0,0,3);
+    cursor: pointer;
+    color: #880E4F;
+}
+
+form {
+	border: 1px solid #880E4F;
+	background: #fff;
+	padding: 20px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 400px;
+}
+
+form .field {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 10px;
+}
+
+form label {
+	text-align: right;
+	padding: 6px;
+}
+
+form select from input {
+	margin: 4px;
+	padding: 6px;
+	box-sizing: border-box;
+}
+
+form button {
+	color: #fff;
+	font-size: 1.5em;
+	background: #2D71F0;
+	border: 0;
+	padding: 0 10px;
+	margin-left: 100px;
+	cursor: pointer;
+}
+
+
+#user-details {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 40%;
+	height: 100%;
+	background: #80c982;
+	padding: 30px;
+	overflow: auto;
+	box-shadow: -2px -3px 5px rgba(0,0,0,3);
+	box-sizing: border-box;
+	color: #fff;
 }

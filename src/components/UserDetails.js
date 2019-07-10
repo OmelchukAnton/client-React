@@ -13,14 +13,14 @@ class UserDetails extends Component {
                 </div>
             );
         } else {
-            return (<div> no user selected </div>);
+            return (<div> No user selected </div>);
         }
     }
 
     render () {
         return (
             <div id="user-details">
-                <p> Output user date here: </p>
+                <p> Output User info here: </p>
                 {this.displayUserDetails()}
 
             </div>
